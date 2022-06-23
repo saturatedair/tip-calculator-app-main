@@ -1,0 +1,218 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  background-color: hsl(185, 41%, 84%);
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  border-radius: 1rem;
+  background-color: white;
+  display: flex;
+}
+
+/* content left */
+
+.left-content {
+  height: auto;
+  flex: 1;
+  padding: 1rem 3rem 1rem 2rem;
+}
+
+.left-content span {
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+.bill-header,
+.person.header {
+  margin-bottom: 0.4rem;
+}
+.bill-amount,
+.person-amount {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  border-radius: 0.5rem;
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: right;
+}
+
+.bill,
+.person {
+  position: relative;
+}
+.bill-amount:focus,
+.person-amount:focus {
+  outline-color: rgb(206, 174, 33);
+  outline-style: dashed;
+}
+.dollar-icon,
+.person-icon {
+  position: absolute;
+  top: 50%;
+  right: 90%;
+  transform: translate(-50%, -50%);
+}
+.person-text {
+  display: flex;
+  justify-content: space-between;
+}
+.person-error {
+  color: rgb(206, 174, 33);
+  font-size: 0.7rem;
+  align-self: flex-end;
+  display: none;
+}
+
+.person-error-display {
+  display: block !important;
+}
+
+/* tip amount */
+.tip-content {
+  margin-bottom: 2rem;
+}
+.tip-amount {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: repeat(3, 50%);
+  gap: 1rem;
+  color: white;
+}
+
+.tip-amount .tip-btn,
+.custom {
+  background-color: hsl(183, 100%, 15%);
+  text-align: center;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bill-amount::-webkit-outer-spin-button,
+.bill-amount::-webkit-inner-spin-button,
+.person-amount::-webkit-outer-spin-button,
+.person-amount::-webkit-inner-spin-button,
+.custom-btn::-webkit-outer-spin-button,
+.custom-btn::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.custom-btn {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-align: center;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: white;
+}
+.custom-btn:focus {
+  background-color: hsl(172, 67%, 45%) !important;
+}
+
+.custom-btn::placeholder {
+  color: white;
+}
+/* js */
+.active {
+  background-color: hsl(172, 67%, 45%) !important;
+  color: hsl(183, 100%, 15%) !important;
+}
+
+.tip-amount .custom-btn {
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  width: 100%;
+}
+
+/* content right */
+.right-content {
+  flex: 1;
+  height: auto;
+  border-radius: 1rem;
+  background-color: hsl(183, 100%, 15%);
+  margin: 1rem;
+  padding: 0rem 2rem;
+}
+
+.calculatedTip {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.calculatedTipText {
+  display: flex;
+  flex-direction: column;
+}
+.calculatedTipText .info {
+  color: antiquewhite;
+  font-size: 0.8rem;
+  margin-top: 0.35rem;
+}
+.calculatedTipText .sub-info {
+  color: hsl(180, 1%, 51%);
+  font-size: 0.6rem;
+  margin-top: 0.1rem;
+}
+.calculatedTipAmount {
+  font-size: 2rem;
+  letter-spacing: 0.15rem;
+  color: hsl(172, 67%, 45%);
+}
+.calculatedCost {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.calculatedCostText {
+  display: flex;
+  flex-direction: column;
+}
+.calculatedCostText .info {
+  color: antiquewhite;
+  font-size: 0.8rem;
+  margin-top: 0.35rem;
+}
+.calculatedCostText .sub-info {
+  color: hsl(180, 1%, 51%);
+  font-size: 0.6rem;
+  margin-top: 0.1rem;
+}
+.calculatedCostAmount {
+  font-size: 2rem;
+  letter-spacing: 0.15rem;
+  color: hsl(172, 67%, 45%);
+}
+
+.reset-btn {
+  background-color: hsl(172, 67%, 45%);
+  border: none;
+  display: block;
+  width: 100%;
+  margin-top: 6rem;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
