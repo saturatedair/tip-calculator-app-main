@@ -15,9 +15,9 @@ let billValue = 0.0;
 let personValue = 1;
 let tipValue = 0;
 
-for (var i = 0; i < btns.length; i++) {
+for (let i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function (e) {
-    var current = document.getElementsByClassName("active");
+    let current = document.getElementsByClassName("active");
 
     // If there's no active class
     if (current.length > 0) {
